@@ -1,0 +1,43 @@
+table {
+    border-collapse: collapse;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#gameContainer table tr td:last-of-type {
+    border-right: 2px black solid;
+}
+
+#gameContainer table tr td:first-of-type {
+    border-left: 2px black solid;
+}
+
+#gameContainer table tr td {
+    width: 100px;
+    height: 100px;
+    text-align:center;
+}
+
+.empty {
+    background-color: grey;
+}
+
+.exit {
+    border-color: red !important;
+}
+
+.vehicle {
+    padding: 2px;
+}
+
+.vehicle.vehicle-2 {
+    background-color: blue;
+}
+
+.vehicle.vehicle-3 {
+    background-color: green;
+}
+
+.vehicle.objective-vehicle {
+    background-color: red !important;
+}

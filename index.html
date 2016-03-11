@@ -1,0 +1,30 @@
+<html>
+<head>
+    <link href="main.css" rel="stylesheet" type="text/css"/>
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.js"></script>
+    <script src="game.js"></script>
+    <script src="board.js"></script>
+    <script src="board.options.js"></script>
+    <script src="board.serializer.js"></script>
+    <script src="vehicle.js"></script>
+    <script src="view.table.js"></script>
+</head>
+<body>
+    <h2>Rush-Hour Learn To Code Challenge</h2><h3>Travis Stokes</h3>
+    <input type="string" id="layoutText" value="111000203444203RR567780560089ABBB89A"/><button id="loadLayoutButton">Load Layout</button>
+    <div id="gameContainer">
+    </div>
+
+    <script>
+        $(() => {
+            var boardOptions = new BoardOptions();
+            var view = new TableView('gameContainer');
+            var game = new GameController(boardOptions, view);
+
+            $('#loadLayoutButton').on('click', () => game.loadLayout($('#layoutText').val()));
+        });
+    </script>
+</body>
+</html>
